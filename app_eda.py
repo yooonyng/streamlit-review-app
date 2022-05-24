@@ -36,8 +36,8 @@ def run_eda():
     star_menu = sorted(df['stars'].unique())
     selected = st.selectbox('별점 선택',star_menu)
     
-    st.dataframe(df.loc[ df['stars'] == selected , ])
-    
+    st.dataframe(df.loc[ df['stars'] == selected , ['stars','text'] ])
+
 
     
 
